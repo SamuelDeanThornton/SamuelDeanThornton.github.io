@@ -13,10 +13,22 @@ scene.add( cube );
 
 camera.position.z = 5;
 
+import WebGL from 'three/addons/capabilities/WebGL.js';
+
 function animate() {
 	requestAnimationFrame( animate );
     cube.rotation.x += 0.01;
     cube.rotation.y += 0.01;
 	renderer.render( scene, camera );
 }
-animate();
+if ( WebGL.isWebGLAvailable() ) {
+
+	// Initiate function or other initializations here
+	animate();
+
+} else {
+
+	const warning = WebGL.getWebGLErrorMessage();
+	document.getElementById( 'container' ).appendChild( warning );
+
+}
