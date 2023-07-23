@@ -31,6 +31,7 @@ body {
 }
 header {
   background: #322c33;
+  
 }
 header::after{
   content: '';
@@ -46,7 +47,7 @@ nav ul{
   margin: 0;
   padding: 0;
   list-style: none;
-
+  position:fixed;
 }
 
 nav li {
@@ -63,6 +64,7 @@ nav a {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 15px;
+  
 
 }
  nav a:hover{
@@ -96,21 +98,77 @@ nav a {
 .text-left { text-align: left !important; }
 .text-right { text-align: right !important; }
 
-.avatar { margin: 1rem 0; width: 300px; }
+.avatar { 
+  margin: 1rem 0; 
+  width: 300px; 
+}
 
-.hero-body { flex-grow: 1; flex-shrink: 0; padding: 3.0rem 1.5rem; }
+.hero-body {
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: 3.0rem 1.5rem;
+}
 
-.columns { margin-left: -0.75rem; margin-right: -0.75rem; margin-top: -0.75rem; }
+.columns {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  margin-top: -0.75rem;
+}
 
-.is-centered { justify-content: center; }
+.is-centered {
+  justify-content: center;
+}
 
-h1, h2, h3, h4, h5, h6 { font-family: "eurostile", sans-serif; font-weight: 800; }
+h1,h2,h3,h4,h5,h6 {
+  font-family: "eurostile", sans-serif;
+  font-weight: 400;
+}
 
-.title {color: #ffffff; font-weight: 800; font-family: 'Courier New', Courier, monospace; font-size:xx-large;}
+.title {
+  color: #ffffff;
+  font-weight: 800;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: xx-large;
+}
+.about .title {
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "eurostile", sans-serif;
+  font-size: xx-large;
+}
+.subtitle {
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 0;
+  font-size: medium;
+}
+.about .subtitle {
+  color: white;
+  font-family: "eurostile", sans-serif;
+  line-height: 0;
+  font-size: medium;
+}
 
-.subtitle { color: white; font-family: 'Courier New', Courier, monospace; line-height: 0; font-size: medium;}
+.column {
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 0.5rem;
+}
 
-.column { display: block; flex-basis: 0; flex-grow: 1; flex-shrink: 1; padding: 0.5rem; }
+.hero-foot {
+  padding: 0rem 1.0rem;
+}
 
-.hero-foot { padding: 0rem 1.5rem; }
-.hero-foot img.is-bottom { margin-bottom: -0.4rem; }
+.hero-foot img.is-bottom {
+  margin-bottom: -0.2rem;
+}
+
+.about{
+  align-items: stretch; 
+  display: flex; 
+  flex-direction: column; 
+  background-color:#322c33; 
+  color: white;
+}
